@@ -9,7 +9,6 @@ public class MessageService {
                 Message(text = "m1", author = "usr1", id = 0),
                 Message(text = "m2", author = "usr2", id = 1),
                 Message(text = "m3", author = "usr3", id = 2)
-
         )
     }
 }
