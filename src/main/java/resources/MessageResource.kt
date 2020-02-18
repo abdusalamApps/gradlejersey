@@ -1,3 +1,5 @@
+package resources
+
 import models.Message
 import services.MessageService
 import javax.ws.rs.GET
@@ -10,6 +12,7 @@ import javax.ws.rs.core.MediaType
 public class MessageResource {
 
     var messageService = MessageService()
+
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

@@ -9,7 +9,6 @@ class Profile(
         var firstName: String,
         var lastName: String
 
-
 ) {
     constructor() : this(id = 0L, profileName = "", firstName = "", lastName = "")
 
