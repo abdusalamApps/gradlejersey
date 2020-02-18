@@ -43,5 +43,18 @@ dependencies {
 
     compile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.30'
 
-}
+    compileKotlin {
+        kotlinOptions {
+            jvmTarget = "11"
+        }
+    }
+    compileTestKotlin {
+        kotlinOptions {
+            jvmTarget = "11"
+        }
+    }
 
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+
+}

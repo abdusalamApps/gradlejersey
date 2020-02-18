@@ -1,22 +1,31 @@
-package database;
+package database
 
-import models.Message;
-import models.Profile;
+import models.Message
+import models.Profile
+import java.util.*
+import kotlin.collections.HashMap
 
-import java.util.HashMap;
-import java.util.Map;
+/*public class Database {
+    companion object {
+        private val _messages = HashMap<Long, Message>()
+        val messges: HashMap<Long, Message>
+            get() = _messages
 
-public class Database {
+        private val _profiles = HashMap<Long, Profile>()
+        val profiles: HashMap<Long, Profile>
+            get() = _profiles
 
-    private static Map<Long, Message> messageMap = new HashMap<>();
-    private static Map<Long, Profile> profileMap = new HashMap<>();
-
-    public static Map<Long, Message> getMessages() {
-        return messageMap;
     }
+}*/
 
-    public static Map<Long, Profile> getProfiles() {
-        return profileMap;
-    }
+object Database {
+    val _messages = HashMap<Long, Message>()
+    val messages: HashMap<Long, Message>
+        get() = _messages
+
+    private val _profiles = HashMap<Long, Profile>()
+    val profiles: HashMap<Long, Profile>
+        get() = _profiles
 
 }
+

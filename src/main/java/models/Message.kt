@@ -1,56 +1,16 @@
-package models;
+package models
 
-import javax.xml.bind.annotation.XmlRootElement;
-import java.util.Date;
+import java.util.*
+import javax.xml.bind.annotation.XmlRootElement
 
 @XmlRootElement
-public class Message {
-    private long id;
-    private String message;
-    private Date created;
-    private String author;
+class Message (
+        var id: Long,
+        var message: String,
+        var created: Date = Date(),
+        var author: String
+) {
 
-    public Message() {
+    constructor(): this(0L, "", Date(),"")
 
     }
-
-    public Message(long id, String message, String author) {
-        this.id = id;
-        this.message = message;
-        this.created = new Date();
-        this.author = author;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-}

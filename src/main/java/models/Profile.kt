@@ -1,55 +1,16 @@
-package models;
+package models
 
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlRootElement
 
 @XmlRootElement
-public class Profile {
+class Profile(
+        var id: Long = 0L,
+        var profileName: String,
+        var firstName: String,
+        var lastName: String
 
-    private long id;
-    private String profileName;
-    private String firstName;
-    private String lastName;
 
-    public Profile() {
+) {
+    constructor() : this(id = 0L, profileName = "", firstName = "", lastName = "")
 
-    }
-
-    public Profile(long id, String profileName, String firstName, String lastName) {
-        this.id = id;
-        this.profileName = profileName;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getProfileName() {
-        return profileName;
-    }
-
-    public void setProfileName(String profileName) {
-        this.profileName = profileName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }
