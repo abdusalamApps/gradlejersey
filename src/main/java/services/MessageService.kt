@@ -9,8 +9,7 @@ class MessageService() {
     var messages: HashMap<Long, Message> = Database.messages
 
     init {
-        messages[0L] = Message(id = 0L, message = "This is the first message", author = "Me")
-        messages[1L] = Message(id = 1L, message = "This is the second message", author = "Not Me")
+        messages[1L] = Message(id = 1L, message = "Hello Zere!", author = "Zirgovic")
     }
 
     fun getMessages(): List<Message> {
@@ -33,8 +32,15 @@ class MessageService() {
         return message
     }
 
-    fun removeMessage(id: Long): Message? {
+    fun deleteMessage(id: Long): Message? {
+        println("delete ${messages.remove(id)}")
         return messages.remove(id)
     }
+
+    fun printMessages() {
+        for (m in messages)
+            println(m.toString())
+    }
+
 
 }

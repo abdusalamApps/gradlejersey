@@ -4,13 +4,17 @@ import java.util.*
 import javax.xml.bind.annotation.XmlRootElement
 
 @XmlRootElement
-class Message (
+data class Message(
         var id: Long,
         var message: String,
         var created: Date = Date(),
         var author: String
 ) {
 
-    constructor(): this(0L, "", Date(),"")
+    constructor() : this(id = 0, message = "", author = "", created = Date())
 
+    override fun toString(): String {
+        return " $id, $message, $created, $author"
     }
+
+}
