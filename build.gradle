@@ -34,14 +34,17 @@ dependencies {
     // bundles
     compile group: 'org.glassfish.jersey.bundles', name: 'jaxrs-ri', version: '2.30'
 
-    //    MySQL connector dependency
-    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
-
     compile('javax.xml.bind:jaxb-api:2.3.0')
     compile('javax.activation:activation:1.1')
     compile('org.glassfish.jaxb:jaxb-runtime:2.3.0')
 
     compile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.30'
+
+    //    MySQL connector dependency
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+
+    // Hibernate sql framework
+    compile('org.hibernate:hibernate-core:5.4.11.Final')
 
     compileKotlin {
         kotlinOptions {
